@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50F5D454-19DB-55D3-1A13-9A181C3FC8C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.3.0f4</UnityVersion>
+    <RootNamespace>
+    </RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_0;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_0;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Packages\Newtonsoft.Json.7.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>Assets\Packages\protobuf-net.2.0.0.668\protobuf-net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Packages\Unity.IO.Compression\BlockType.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\CompressionMode.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\CopyEncoder.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\Crc32Helper.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\DeflateInput.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\DeflateStream.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\DeflateStreamAsyncResult.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\DeflaterManaged.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\FastEncoder.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\FastEncoderStatics.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\FastEncoderWindow.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\FileFormats.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\GZipDecoder.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\GZipStream.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\GZipUtils.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\HuffmanTree.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\IDeflater.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\Inflater.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\InflaterState.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\InputBuffer.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\InvalidDataException.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\Match.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\MatchState.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\OutputBuffer.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\OutputWindow.cs" />
+    <Compile Include="Assets\Packages\Unity.IO.Compression\SR.cs" />
+    <Compile Include="Assets\Script\Extension\Tuple.cs" />
+    <Compile Include="Assets\Script\Network\Attributes\ExposeBranchAttribute.cs" />
+    <Compile Include="Assets\Script\Network\Attributes\ExposeToClientAttribute.cs" />
+    <Compile Include="Assets\Script\Network\Attributes\ProtocolAttribute.cs" />
+    <Compile Include="Assets\Script\Network\Attributes\SensitiveFieldAttribute.cs" />
+    <Compile Include="Assets\Script\Network\Attributes\SetByServerAttribute.cs" />
+    <Compile Include="Assets\Script\Network\BindedProtocolEntry.cs" />
+    <Compile Include="Assets\Script\Network\CompiledAllServiceProtocolMap.cs" />
+    <Compile Include="Assets\Script\Network\Crypt\CryptAES.cs" />
+    <Compile Include="Assets\Script\Network\Crypt\GzipCompress.cs" />
+    <Compile Include="Assets\Script\Network\Enum\RhymeClientSessionCallbackEnum.cs" />
+    <Compile Include="Assets\Script\Network\Enum\RhymeClientSessionEnum.cs" />
+    <Compile Include="Assets\Script\Network\Enum\RhymeClientTableCallbackEnum.cs" />
+    <Compile Include="Assets\Script\Network\Enum\RhymeClientTableEnum.cs" />
+    <Compile Include="Assets\Script\Network\PacketPackage\FixedPacketExtractor.cs" />
+    <Compile Include="Assets\Script\Network\PacketPackage\IPacketExtractor.cs" />
+    <Compile Include="Assets\Script\Network\PacketPackage\IProtocolPackage.cs" />
+    <Compile Include="Assets\Script\Network\PacketPackage\RhymeTcpProtocolPackage.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\AesDecryptFilter.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\AesEncryptFilter.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\IFilterOperation.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\Pipeline.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\ZipCompressFilter.cs" />
+    <Compile Include="Assets\Script\Network\PipesAndFilter\ZipExtractFilter.cs" />
+    <Compile Include="Assets\Script\Network\Protocol\PacketDefaultHeader.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\IByteArraySerializableObject.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\ISerializer.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\NewtonJsonSerializer.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\PacketSerializeMode.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\ProtobufBinarySerializer.cs" />
+    <Compile Include="Assets\Script\Network\Serialize\SerializerManager.cs" />
+    <Compile Include="Assets\Script\Network\Socket\ClientSocket.cs" />
+    <Compile Include="Assets\Script\Network\Socket\ProtocolDispatchTask.cs" />
+    <Compile Include="Assets\Script\Network\SocketSetting.cs" />
+    <Compile Include="Assets\Script\Network\Utils\ByteHelper.cs" />
+    <Compile Include="Assets\Script\Network\Utils\SingletonBase.cs" />
+    <Compile Include="Assets\Script\NetworkHelper.cs" />
+    <Compile Include="Assets\Script\PlatformToken.cs" />
+    <Compile Include="Assets\Script\Rhyme\Cards\Card.cs" />
+    <Compile Include="Assets\Script\Rhyme\Cards\Deck.cs" />
+    <Compile Include="Assets\Script\Rhyme\Cards\Rank.cs" />
+    <Compile Include="Assets\Script\Rhyme\Cards\Suit.cs" />
+    <Compile Include="Assets\Script\Rhyme\ClientErrorCode.cs" />
+    <Compile Include="Assets\Script\Rhyme\Defines.Constants.cs" />
+    <Compile Include="Assets\Script\Rhyme\Defines.cs" />
+    <Compile Include="Assets\Script\Rhyme\EntropyChecker.cs" />
+    <Compile Include="Assets\Script\Rhyme\Enums.2Ace.cs" />
+    <Compile Include="Assets\Script\Rhyme\Enums.cs" />
+    <Compile Include="Assets\Script\Rhyme\HandIdConverter.cs" />
+    <Compile Include="Assets\Script\Rhyme\HashGenerator.cs" />
+    <Compile Include="Assets\Script\Rhyme\IActiveAware.cs" />
+    <Compile Include="Assets\Script\Rhyme\IBlendCompatibility.cs" />
+    <Compile Include="Assets\Script\Rhyme\MgrBase.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\AccountTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\AuthTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\BackOfficeTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\Common.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\ConfigTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\GPType.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\GameHoldemTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\HandHistoryTypes.Client.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\HandHistoryTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\LobbyTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\PortalIngrationTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\RedisTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\SessionTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\TableTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\TourneyTypes.cs" />
+    <Compile Include="Assets\Script\Rhyme\Protocols.cs" />
+    <Compile Include="Assets\Script\Rhyme\RankInformation.cs" />
+    <Compile Include="Assets\Script\Rhyme\ResultCode.cs" />
+    <Compile Include="Assets\Script\Rhyme\ServiceProvider.cs" />
+    <Compile Include="Assets\Script\Rhyme\Severity.cs" />
+    <Compile Include="Assets\Script\Rhyme\Utils\GuidExtension.cs" />
+    <Compile Include="Assets\Script\Rhyme\Utils\StringTableKeyNameAttribute.cs" />
+    <Compile Include="Assets\Script\UnitySocketClientLogic.cs" />
+    <Compile Include="Assets\UnitySocketClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Packages\Newtonsoft.Json.7.0.1\lib\net35\Newtonsoft.Json.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+</Project>
