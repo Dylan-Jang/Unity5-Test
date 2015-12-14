@@ -59,12 +59,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -76,6 +70,12 @@
     </Reference>
     <Reference Include="protobuf-net">
       <HintPath>Assets\Packages\protobuf-net.2.0.0.668\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhyme.Protocol.Common">
+      <HintPath>Assets\Packages\Rhyme\Rhyme.Protocol.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhyme.Holdem">
+      <HintPath>Assets\Packages\Rhyme\Rhyme.Holdem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -105,20 +105,10 @@
     <Compile Include="Assets\Packages\Unity.IO.Compression\OutputBuffer.cs" />
     <Compile Include="Assets\Packages\Unity.IO.Compression\OutputWindow.cs" />
     <Compile Include="Assets\Packages\Unity.IO.Compression\SR.cs" />
-    <Compile Include="Assets\Script\Extension\Tuple.cs" />
-    <Compile Include="Assets\Script\Network\Attributes\ExposeBranchAttribute.cs" />
-    <Compile Include="Assets\Script\Network\Attributes\ExposeToClientAttribute.cs" />
-    <Compile Include="Assets\Script\Network\Attributes\ProtocolAttribute.cs" />
-    <Compile Include="Assets\Script\Network\Attributes\SensitiveFieldAttribute.cs" />
-    <Compile Include="Assets\Script\Network\Attributes\SetByServerAttribute.cs" />
     <Compile Include="Assets\Script\Network\BindedProtocolEntry.cs" />
     <Compile Include="Assets\Script\Network\CompiledAllServiceProtocolMap.cs" />
     <Compile Include="Assets\Script\Network\Crypt\CryptAES.cs" />
     <Compile Include="Assets\Script\Network\Crypt\GzipCompress.cs" />
-    <Compile Include="Assets\Script\Network\Enum\RhymeClientSessionCallbackEnum.cs" />
-    <Compile Include="Assets\Script\Network\Enum\RhymeClientSessionEnum.cs" />
-    <Compile Include="Assets\Script\Network\Enum\RhymeClientTableCallbackEnum.cs" />
-    <Compile Include="Assets\Script\Network\Enum\RhymeClientTableEnum.cs" />
     <Compile Include="Assets\Script\Network\PacketPackage\FixedPacketExtractor.cs" />
     <Compile Include="Assets\Script\Network\PacketPackage\IPacketExtractor.cs" />
     <Compile Include="Assets\Script\Network\PacketPackage\IProtocolPackage.cs" />
@@ -143,43 +133,7 @@
     <Compile Include="Assets\Script\Network\Utils\SingletonBase.cs" />
     <Compile Include="Assets\Script\NetworkHelper.cs" />
     <Compile Include="Assets\Script\PlatformToken.cs" />
-    <Compile Include="Assets\Script\Rhyme\Cards\Card.cs" />
-    <Compile Include="Assets\Script\Rhyme\Cards\Deck.cs" />
-    <Compile Include="Assets\Script\Rhyme\Cards\Rank.cs" />
-    <Compile Include="Assets\Script\Rhyme\Cards\Suit.cs" />
-    <Compile Include="Assets\Script\Rhyme\ClientErrorCode.cs" />
-    <Compile Include="Assets\Script\Rhyme\Defines.Constants.cs" />
-    <Compile Include="Assets\Script\Rhyme\Defines.cs" />
-    <Compile Include="Assets\Script\Rhyme\EntropyChecker.cs" />
-    <Compile Include="Assets\Script\Rhyme\Enums.2Ace.cs" />
-    <Compile Include="Assets\Script\Rhyme\Enums.cs" />
-    <Compile Include="Assets\Script\Rhyme\HandIdConverter.cs" />
-    <Compile Include="Assets\Script\Rhyme\HashGenerator.cs" />
-    <Compile Include="Assets\Script\Rhyme\IActiveAware.cs" />
-    <Compile Include="Assets\Script\Rhyme\IBlendCompatibility.cs" />
-    <Compile Include="Assets\Script\Rhyme\MgrBase.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\AccountTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\AuthTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\BackOfficeTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\Common.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\ConfigTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\GPType.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\GameHoldemTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\HandHistoryTypes.Client.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\HandHistoryTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\LobbyTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\PortalIngrationTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\RedisTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\SessionTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\TableTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\ProtocolTypes\TourneyTypes.cs" />
-    <Compile Include="Assets\Script\Rhyme\Protocols.cs" />
-    <Compile Include="Assets\Script\Rhyme\RankInformation.cs" />
-    <Compile Include="Assets\Script\Rhyme\ResultCode.cs" />
-    <Compile Include="Assets\Script\Rhyme\ServiceProvider.cs" />
-    <Compile Include="Assets\Script\Rhyme\Severity.cs" />
-    <Compile Include="Assets\Script\Rhyme\Utils\GuidExtension.cs" />
-    <Compile Include="Assets\Script\Rhyme\Utils\StringTableKeyNameAttribute.cs" />
+    <Compile Include="Assets\Script\TwoAceLoginhelper.cs" />
     <Compile Include="Assets\Script\UnitySocketClientLogic.cs" />
     <Compile Include="Assets\UnitySocketClient.cs" />
   </ItemGroup>
