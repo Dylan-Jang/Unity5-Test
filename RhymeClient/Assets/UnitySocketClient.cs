@@ -1,17 +1,10 @@
 ﻿using Assets.Script.Network.Socket;
-using Rhyme.Client.Protocol.Enum;
 using UnityEngine;
 
-namespace Assets.Script
+namespace Assets
 {
 	public partial class UnitySocketClient : MonoBehaviour
 	{
-		//private static readonly UnitySocketClient _instance = new UnitySocketClient();
-		//public static UnitySocketClient Instance
-		//{
-		//	get { return _instance; }
-		//}
-
 		public int SendIterationCount = 1;
 
 		private readonly ClientSocket _socket = new ClientSocket();
@@ -26,11 +19,9 @@ namespace Assets.Script
 			get { return _socket != null && _socket.IsConnected(); }
 		}
 
-		//private UnitySocketClientLogic _logic;
-
 		public UnitySocketClient()
 		{
-			//_logic = new UnitySocketClientLogic();
+			BindAllSessionProtocol();
 		}
 
 		// Use this for initialization
@@ -63,8 +54,6 @@ namespace Assets.Script
 		{
 			_isConnected = false;
 		}
-
-		public RhymeClientSessionEnum sessionEnum;
 
 		public void Send()
 		{

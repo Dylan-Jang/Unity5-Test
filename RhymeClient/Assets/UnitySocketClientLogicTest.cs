@@ -8,7 +8,7 @@ using Rhyme.Common;
 using UnityEngine;
 using DeviceType = Rhyme.Common.DeviceType;
 
-namespace Assets.Script
+namespace Assets
 {
 	public partial class UnitySocketClient
 	{
@@ -31,43 +31,29 @@ namespace Assets.Script
 				MacAddress = NetworkHelper.GetMacAddress(),
 				UserDeviceType = DeviceType.Pc,
 				UserOsType = OSType.Windows,
-			}
-			, OnLoginResponse);
+			});
 		}
 
-		private void OnLoginResponse(object payload)
+		private void OnLoginResponseInternal(LoginResponse response)
 		{
-			var response = payload as LoginResponse;
-			if (response == null)
-			{
-				Debug.Log(string.Format("TResponse type casting failed: {0}, ToString: {1}", payload.GetType(), payload));
-				return;
-			}
-
 			Debug.Log(string.Format("TResponse {0}, Type: {1}, ToString: {2}, ResultCode: {3} ({4})",
 				response.Result == ResultCode.Success ? "Success" : "Failed",
-				payload.GetType().Name, payload, response.Result, (int)response.Result));
+				response.GetType().Name, response, response.Result, (int)response.Result));
 		}
 
-		// TODO: need generate. like Impl class.
 		public void Protocol_GetTableTypes()
 		{
-			_socket.Send((int)RhymeClientSessionEnum.GetTableTypes, new GetTableTypesRequest { UserDeviceType = DeviceType.Pc, }, OnGetTableTypesResponse);
+			_socket.Send((int)RhymeClientSessionEnum.GetTableTypes, new GetTableTypesRequest
+			{
+				UserDeviceType = DeviceType.Pc,
+			});
 		}
 
-		private void OnGetTableTypesResponse(object payload)
+		private void OnGetTableTypesResponseInternal(GetTableTypesResponse response)
 		{
-			// 현재는 이게 최선 인듯
-			var response = payload as GetTableTypesResponse;
-			if (response == null)
-			{
-				Debug.Log(string.Format("TResponse type casting failed: {0}, ToString: {1}", payload.GetType(), payload));
-				return;
-			}
-
 			Debug.Log(string.Format("TResponse {0}, Type: {1}, ToString: {2}, ResultCode: {3} ({4})",
 				response.Result == ResultCode.Success ? "Success" : "Failed",
-				payload.GetType().Name, payload, response.Result, (int)response.Result));
+				response.GetType().Name, response, response.Result, (int)response.Result));
 
 			foreach (var tableType in response.TableTypes)
 			{
@@ -75,37 +61,20 @@ namespace Assets.Script
 			}
 		}
 
-		//private void OnGetTableTypesResponse2<TResponse>(TResponse res)
-		//	where TResponse : Response
-		//{
-		//	// TODO: need interface. cast object to TResponse.
-
-		//	var response = (TResponse)res;
-
-		//	Debug.Log(string.Format("TResponse name: {0}, Result: {1}", typeof(TResponse).Name, response.Result));
-		//}
-
 		public void Protocol_GetBalance()
 		{
 			_socket.Send((int)RhymeClientSessionEnum.GetBalance, new GetBalanceRequest
 			{
 				UserId = Guid.NewGuid(),
 				UserName = "userName",
-			}, OnGetBalanceResponse);
+			});
 		}
 
-		private void OnGetBalanceResponse(object payload)
+		private void OnGetBalanceResponseInternal(GetBalanceResponse response)
 		{
-			var response = payload as GetBalanceResponse;
-			if (response == null)
-			{
-				Debug.Log(string.Format("TResponse type casting failed: {0}, ToString: {1}", payload.GetType(), payload));
-				return;
-			}
-
 			Debug.Log(string.Format("TResponse {0}, Type: {1}, ToString: {2}, ResultCode: {3} ({4})",
 				response.Result == ResultCode.Success ? "Success" : "Failed",
-				payload.GetType().Name, payload, response.Result, (int)response.Result));
+				response.GetType().Name, response, response.Result, (int)response.Result));
 		}
 	}
 }

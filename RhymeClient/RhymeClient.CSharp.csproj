@@ -106,7 +106,6 @@
     <Compile Include="Assets\Packages\Unity.IO.Compression\OutputWindow.cs" />
     <Compile Include="Assets\Packages\Unity.IO.Compression\SR.cs" />
     <Compile Include="Assets\Script\Network\BindedProtocolEntry.cs" />
-    <Compile Include="Assets\Script\Network\CompiledAllServiceProtocolMap.cs" />
     <Compile Include="Assets\Script\Network\Crypt\CryptAES.cs" />
     <Compile Include="Assets\Script\Network\Crypt\GzipCompress.cs" />
     <Compile Include="Assets\Script\Network\PacketPackage\FixedPacketExtractor.cs" />
@@ -127,15 +126,20 @@
     <Compile Include="Assets\Script\Network\Serialize\ProtobufBinarySerializer.cs" />
     <Compile Include="Assets\Script\Network\Serialize\SerializerManager.cs" />
     <Compile Include="Assets\Script\Network\Socket\ClientSocket.cs" />
+    <Compile Include="Assets\Script\Network\Socket\ClientSocket2.cs" />
+    <Compile Include="Assets\Script\Network\Socket\ISocketCallbackBinder.cs" />
     <Compile Include="Assets\Script\Network\Socket\ProtocolDispatchTask.cs" />
+    <Compile Include="Assets\Script\Network\Socket\SocketCallbackBinder.cs" />
     <Compile Include="Assets\Script\Network\SocketSetting.cs" />
     <Compile Include="Assets\Script\Network\Utils\ByteHelper.cs" />
     <Compile Include="Assets\Script\Network\Utils\SingletonBase.cs" />
     <Compile Include="Assets\Script\NetworkHelper.cs" />
     <Compile Include="Assets\Script\PlatformToken.cs" />
     <Compile Include="Assets\Script\TwoAceLoginhelper.cs" />
-    <Compile Include="Assets\Script\UnitySocketClientLogic.cs" />
     <Compile Include="Assets\UnitySocketClient.cs" />
+    <Compile Include="Assets\UnitySocketClientLogicTest.cs" />
+    <Compile Include="Assets\UnitySocketClientLogicTest2.cs" />
+    <Compile Include="Assets\UnitySocketClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\Newtonsoft.Json.7.0.1\lib\net35\Newtonsoft.Json.xml" />

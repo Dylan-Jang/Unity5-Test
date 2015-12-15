@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Assets.Script.Network.Socket
 {
-	public class StateObject
+	public class StateObject2
 	{
 		public const int MaxBuffSize = 1024 * 4;
 
@@ -19,7 +19,7 @@ namespace Assets.Script.Network.Socket
 		public byte[] Buffer = new byte[MaxBuffSize];
 	}
 
-	public class ClientSocket
+	public class ClientSocket2
 	{
 		enum ConnectEventType
 		{
@@ -47,16 +47,17 @@ namespace Assets.Script.Network.Socket
 		// protobufserialize does not work
 		private ISerializer _serializer = new NewtonJsonSerializer();
 
-		// thread block ¹®Á¦·Î º°µµ·Î ¸ŞÀÎ¾²·¹µå¿¡¼­ pollingÇÒ task queue
+		// thread block ë¬¸ì œë¡œ ë³„ë„ë¡œ ë©”ì¸ì“°ë ˆë“œì—ì„œ pollingí•  task queue
 		private readonly Queue<ProtocolDispatchTask> _taskQueue = new Queue<ProtocolDispatchTask>();
-		// I/O lock - Input°ú outputÀÌ º°°³ÀÇ ¾²·¹µå ·çÆ¾À¸·Î Ã³¸®°¡ µÊÀ¸·Î lockingÀÌ ÇÊ¿äÇÔ. 
-		// Å¬¶óÀÌ¾ğÆ®ÀÌ¹Ç·Î ÀÌ io lockÀÇ ºñ¿ëÀº ¹«½Ã ÇØµµ µÈ´Ù.
+		// I/O lock - Inputê³¼ outputì´ ë³„ê°œì˜ ì“°ë ˆë“œ ë£¨í‹´ìœ¼ë¡œ ì²˜ë¦¬ê°€ ë¨ìœ¼ë¡œ lockingì´ í•„ìš”í•¨. 
+		// í´ë¼ì´ì–¸íŠ¸ì´ë¯€ë¡œ ì´ io lockì˜ ë¹„ìš©ì€ ë¬´ì‹œ í•´ë„ ëœë‹¤.
 		private readonly object _queueLock = new object();
 
-		public ClientSocket()
+		public ClientSocket2()
 		{
 			ProtocolPackage = new RhymeTcpProtocolPackage(OnPacketBodyParseCompletedHandlerCallback, OnPacketHeaderReadCompletedHandlerCallback);
 		}
+
 
 		protected void OnPacketHeaderReadCompletedHandlerCallback(PacketDefaultHeader header)
 		{
@@ -67,16 +68,26 @@ namespace Assets.Script.Network.Socket
 			EnqueueTask(header.ProtocolId, readBytes);
 		}
 
+		////  dispatch ë°›ì„ í•¨ìˆ˜ delegate
+		//public delegate void DispatcherFunctor(object payload);
+
+		//class ProtocolDispatchItem
+		//{
+		//	public DispatcherFunctor DispatchFunctor;
+		//	public Type ResponseType;
+		//}
+
 		// dispatch impl
+		// private readonly Dictionary<Int32, ProtocolDispatchItem> _packetDispatchList = new Dictionary<Int32, ProtocolDispatchItem>();
 		private readonly Dictionary<Int32, ISocketCallbackBinder> _packetDispatchList = new Dictionary<Int32, ISocketCallbackBinder>();
 
-		internal void BindProtocol(int protocolId, ISocketCallbackBinder callbackBinder)
+		public void BindProtocol(int protocolId, ISocketCallbackBinder callbacinBinder)
 		{
 			if (true == _packetDispatchList.ContainsKey(protocolId))
 			{
 				return;
 			}
-			_packetDispatchList.Add(protocolId, callbackBinder);
+			_packetDispatchList.Add(protocolId, callbacinBinder);
 		}
 
 		public void UnbindProtocol(int protocolId)
@@ -120,7 +131,9 @@ namespace Assets.Script.Network.Socket
 				return;
 			}
 
-			// µ¿±âÄİ.
+			// var resObject = _serializer.Deserialize(payload, _packetDispatchList[protocolId].ResponseType);
+
+			// ë™ê¸°ì½œ.
 			_packetDispatchList[protocolId].Dispatch(ref _serializer, payload);
 		}
 
@@ -257,12 +270,6 @@ namespace Assets.Script.Network.Socket
 
 		public void Send<T>(int protocolId, T requestObject) where T : class
 		{
-			if (_sock == null || _sock.Connected == false)
-			{
-				Debug.Log("Send failed. _sock is null or disconnected.");
-				return;
-			}
-
 			SendInternal(protocolId, _serializer.Serialize(requestObject));
 		}
 
@@ -310,11 +317,11 @@ namespace Assets.Script.Network.Socket
 			}
 		}
 
+
 		public void Close()
 		{
 			Shutdown();
 		}
-
 		private void Shutdown()
 		{
 			if (_sock != null)

@@ -55,7 +55,7 @@ namespace Assets.Script.Network.PacketPackage
 
 				return true;
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 				return false;
 			}
@@ -107,7 +107,7 @@ namespace Assets.Script.Network.PacketPackage
 					if (PacketBodyParseCompletedHandlerCallback != null)
 						PacketBodyParseCompletedHandlerCallback(_currentProcessingHeader, _bodyExtractor.GetBuffer());
 				}
-				catch (Exception e)
+				catch (Exception)
 				{
 					// NOTE : not throw
 				}

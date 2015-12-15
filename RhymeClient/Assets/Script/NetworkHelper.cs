@@ -24,7 +24,7 @@ namespace Rhyme.Bot.Helper
 			return new IPAddress(BitConverter.GetBytes(ip)).ToString();
 		}
 
-		private static string _hardwareNumber;
+		//private static string _hardwareNumber;
 
 		//public static async Task<string> CreateHardwareNumber()
 		//{
@@ -81,7 +81,7 @@ namespace Rhyme.Bot.Helper
 			{
 				if (macAddress == string.Empty)// only return MAC Address from first card
 				{
-					var properties = adapter.GetIPProperties();
+					//var properties = adapter.GetIPProperties();
 					macAddress = adapter.GetPhysicalAddress().ToString();
 				}
 			}
